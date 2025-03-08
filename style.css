@@ -1,0 +1,1 @@
+/* Perustyyli - kaikkiin sivun elementteihin */ body { background-color:lightcyan; font-tyyli: normaali; } h1 { font-family: 'Pacifico'; tekstivarjo: 1px 1px valkoinen; väri: rgb(122, 121, 120); } h2 { font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; tekstin koristelu: alleviivaus; väri: sininen; }
