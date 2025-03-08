@@ -4,10 +4,12 @@
 /* Otsikoiden muotoilut */
 /* Otsikon tausta*/
 body {
-    font-family: "Roboto"
+    font-family: "Roboto";
     margin: 0;
     background-color: #DCEAF7;
     color: #10564F;
+    line-height: 1.4;
+    text-align: center;
 }
 
 header {
