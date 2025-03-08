@@ -9,7 +9,7 @@ body {
     background-color: #DCEAF7;
     color: #10564F;
     line-height: 1.4;
-    text-align: center;
+   text-align: center; 
 }
 
 header {
@@ -61,7 +61,7 @@ nav#mobile-nav li {
 nav#mobile-nav a {
     text-decoration: none;
     color: #10564F;
-    font-family: 'Aharoni';
+    font-family: 'Roboto';
     font-size: 18px;
 }
 
