@@ -9,7 +9,7 @@ body {
 
 /* Headerin tyylit */
 header {
-    background-color: #10564F; /* Tumma vihreä */
+    background-color: #FFFFFF; 
     color: #ffffff;
     padding: 20px;
     display: flex;
@@ -19,7 +19,7 @@ header {
 
 /* Logo, jossa kuva */
 header .logo img {
-    max-height: 50px; /* Rajaa logon korkeutta */
+    max-height: none; /* Rajaa logon korkeutta */
 }
 
 /* Hampurilaisvalikon tyylit */
