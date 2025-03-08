@@ -22,6 +22,9 @@ header .logo img {
     max-height: none; /* Rajaa logon korkeutta */
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /* Headerin muotoilu */
 .overlay {
