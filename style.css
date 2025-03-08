@@ -4,7 +4,7 @@
 /* Otsikoiden muotoilut */
 /* Otsikon tausta*/
 body {
-    font-family: 'Aptos', sans-serif;
+    font-family: "Roboto"
     margin: 0;
     background-color: #DCEAF7;
     color: #10564F;
@@ -78,7 +78,7 @@ main {
 }
 
 h1 {
-    font-family: 'Aharoni';
+    font-family: "Roboto"
     color: #10564F;
     font-size: 42px;
 }
