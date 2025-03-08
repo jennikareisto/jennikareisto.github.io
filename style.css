@@ -1,100 +1,122 @@
-/* Perustyyli sivustolla */ 
-
-/* Linkit */
-/* Otsikoiden muotoilut */
-/* Otsikon tausta*/
+/* Perustyylit koko sivulle */
 body {
-    font-family: "Roboto";
+    font-family: 'Roboto', sans-serif;
+    background-color: #DCEAF7; /* Taustaväri pastellinsininen */
+    color: #ffffff; /* Valkoinen teksti */
     margin: 0;
-    background-color: #DCEAF7;
-    color: #10564F;
-    line-height: 1.4;
-    text-align: center; 
+    padding: 0;
 }
-/* Header-tyylit*/
+
+/* Headerin tyylit */
 header {
-    background-color: #FFFFFF;
-    color: #FFFFFF;
+    background-color: #10564F; /* Tumma vihreä */
+    color: #ffffff;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
 }
 
-.logo a {
-    color: #000000;
-    font-size: 24px;
-    text-decoration: none;
+/* Logo, jossa kuva */
+header .logo img {
+    max-height: 50px; /* Rajaa logon korkeutta */
 }
 
-/*Hamburger-valikko */
+/* Hampurilaisvalikon tyylit */
 button.hamburger {
+    font-size: 30px;
     background: none;
     border: none;
-    color: #000000;
-    font-size: 24px;
-    cursor: pointer;
+    color: white;
 }
 
-nav#mobile-nav {
-    background-color: #FDBCBA;
+/* Mobiilinavigaatio */
+nav {
+    background-color: #FDBCBA; /* Vaaleanpunainen tausta */
+    padding: 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    visibility: hidden;
     z-index: 10;
 }
 
-nav#mobile-nav ul {
-    list-style: none;
+nav ul {
+    list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
-nav#mobile-nav li {
-    margin: 10px 0;
+nav ul li {
+    margin: 15px 0;
 }
 
-nav#mobile-nav a {
+nav ul li a {
     text-decoration: none;
     color: #10564F;
-    font-family: 'Roboto';
-    font-size: 18px;
+    font-size: 1.5em;
 }
 
-.close {
+/* Sulje-nappi */
+button.close {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
     background: none;
     border: none;
-    font-size: 24px;
-    cursor: pointer;
+    color: #10564F;
 }
 
+/* Responsiiviset tyylit */
+@media (min-width: 768px) {
+    /* Tablet-näkymä */
+    nav {
+        visibility: visible;
+        position: static;
+        background-color: transparent;
+        display: flex;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    header .hamburger {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Pöytäkone-näkymä */
+    header {
+        justify-content: flex-start;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+}
+
+/* Pääosion tyylit */
 main {
     padding: 20px;
+    text-align: center;
+    background-color: #FCE896; /* Vaalean keltainen tausta */
 }
 
 h1 {
-    font-family: "Roboto"
-    color: #10564F;
-    font-size: 42px;
+    font-size: 2.5em;
+    margin: 20px 0;
 }
-/* Footer */
-footer {
-    background-color: #10564F;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 10px 0;
-    bottom: 0;
-    width: 100%;
-    position: fixed;
 
-
-}
 
