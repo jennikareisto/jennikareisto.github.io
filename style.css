@@ -20,6 +20,7 @@ header {
 /* Logo, jossa kuva */
 header .logo img {
     max-height: none; /* Rajaa logon korkeutta */
+    margin-left: 100px;
 }
 
 /* Hampurilaisvalikon tyylit */
