@@ -3,60 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jahkailutoimisto</title>
-    <link rel="stylesheet" href="style.css">
-    <meta name="keywords" content="Jahkailutoimisto, Konsultointi, Taloushallinto, Tapahtumat, Me Jahkailijat">
-    <meta name="description" content="Jahkailutoimisto">
+    <title>Yrityksen Nimi</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linkki CSS:ään -->
 </head>
 <body>
+
+    <!-- Header, jossa yrityksen logo -->
     <header>
         <div class="logo">
-            <img src="otsikko.png" alt="Jahkailutoimisto otsikko">
-            <div class="overlay">
-                <nav> 
-                    <a href="index.html">Etusivu</a> 
-                    <a href="konsultointi.html">Konsultointi</a> 
-                    <a href="taloushallinto.html">Taloushallinto</a>
-                    <a href="tapahtumat.html">Tapahtumat</a>
-                    <a href="mejahkailijat.html">Me Jahkailijat</a> 
-                </nav>  
-            </div>
+            <a href="#"><img src="otsikko.png" alt="Yrityksen Logo"></a>
         </div>
+        <!-- Mobiiliversion hampurilaisvalikko -->
+        <button class="hamburger" aria-label="Avaa valikko">
+            ☰
+        </button>
     </header>
-    <div class="esittely">
-        <h1>Me mietimme sen puolestasi!</h1>
-        <div class="content-wrapper">
-            <img class="kuva" src="etusivunkuva.jpg" alt="Etusivun kuva">
-            <div class="teksti">
-                <p>Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.</div></p>
-                    <h2>Tähän väliotsikko</h2>
-                <p>Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.</p>
-            </div>
-        </div>
-    </div>
-    <div class="esittelyä">
-        <h2>Otsikko osa 2</h2>
-        <div class="content-wrapper">
-            <img class="kuva" src="Kuva1.jpg" alt="Kuvituskuva">
-            <div class="teksti">
-                <p>Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.
-                    Tähän kirjoitetaan paljon tekstiä yrityksestä. Tähän kirjoitetaan paljon tekstiä yrityksestä.</p>
-            </div>
-        </div>
-    </div>
+    
+    <!-- Mobiilinavigaatio (lisätään JavaScriptin avulla dynaamisesti näkyviin) -->
+    <nav id="mobile-nav" hidden>
+        <button class="close" aria-label="Sulje valikko">x</button>
+        <ul>
+            <li><a href="konsultointi.html">Konsultointi</a></li>
+            <li><a href="taloushallinto.html">Taloushallinto</a></li>
+            <li><a href="tapahtumat.html">Tapahtumat</a></li>
+            <li><a href="asiantuntijat.html">Asiantuntijat</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Pääsivu, jossa tervetulo-otsikko -->
+    <main>
+        <section id="home">
+            <h1>Tervetuloa Yrityksellemme!</h1>
+            <p>Me tarjoamme asiantuntevia palveluja eri aloilla.</p>
+        </section>
+    </main>
+    
+    <!-- Alatunniste (footer) -->
+    <footer>
+        <p>&copy; 2024 Yrityksen Nimi</p>
+    </footer>
+
+    <!-- Linkki JavaScriptiin -->
+    <script src="script.js"></script>
+
 </body>
 </html>
+
