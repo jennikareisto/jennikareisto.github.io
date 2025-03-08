@@ -1,11 +1,5 @@
 /* Perustyyli sivustolla */ 
-body { 
-    background-color:rgb(253, 188, 186); 
-    font-family: "Roboto"; 
-    color: #ffffff;
-    line-height: 1.4;
-    text-align: center;
-} 
+
 /* Linkit */
 /* Otsikoiden muotoilut */
 /* Otsikon tausta*/
