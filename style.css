@@ -20,6 +20,8 @@ header {
 /* Logo, jossa kuva */
 header .logo img {
     max-height: none; /* Rajaa logon korkeutta */
+    justify-content: center;
+    align-items: center;
 }
 /* Headerin muotoilu */
 .overlay {
