@@ -290,3 +290,29 @@ nav {
 .content-wrapper:nth-child(even) {
     flex-direction: row-reverse;
 }
+@media (max-width: 767px) {
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 60%; /* Voit säätää leveyttä */
+        height: 100vh; /* Peittää koko korkeuden */
+        display: none; /* Piilotetaan aluksi */
+        background-color: rgba(253, 188, 186, 0.9); /* Sama taustaväri, mutta kevyesti läpinäkyvä */
+        text-align: right; /* Teksti oikealle */
+        padding: 20px;
+    }
+
+    nav ul {
+        display: block;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav.show {
+        display: block; /* Näytetään kun menu avataan */
+    }
+}
