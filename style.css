@@ -269,3 +269,18 @@ nav {
         text-align: center;
     }
 }
+@media (max-width: 767px) {
+    .content-wrapper {
+        flex-direction: column; /* Pakottaa kuvan ja tekstin pinoon mobiilissa */
+        text-align: center;
+    }
+
+    .kuva {
+        width: 90%; /* Skaalaa kuvan leveämmäksi mobiilissa */
+    }
+
+    .teksti {
+        width: 100%; /* Teksti vie koko tilan mobiilissa */
+        text-align: center;
+    }
+}
