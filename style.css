@@ -1,76 +1,127 @@
 /* Perustyylit koko sivulle */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #DCEAF7; /* Pastellinsininen tausta */
+    background-color: #DCEAF7; /* Taustaväri pastellinsininen */
     color: #ffffff; /* Valkoinen teksti */
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Estää vaakasuoran vierityksen */
 }
 
 /* Headerin tyylit */
 header {
     background-color: #ffffff; 
+    color: #ffffff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Logo */
+/* Logo, jossa kuva */
 header .logo img {
+    max-height: none; /* Rajaa logon korkeutta */
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+/* Headerin muotoilu */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/* Hampurilaisvalikko */
-.hamburger {
+/* Hampurilaisvalikon tyylit */
+button.hamburger {
     font-size: 30px;
     background: none;
     border: none;
     color: black;
-    display: none; /* Oletuksena piilotettu */
 }
 
-/* Navigaatio */
+/* Mobiilinavigaatio */
 nav {
-    background-color: rgba(253, 188, 186, 0.6); /* Läpikuultava vaaleanpunainen */
-    backdrop-filter: blur(8px); /* Sumea taustatehoste */
+    background-color: #FDBCBA; /* Vaaleanpunainen tausta */
     padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
     display: flex;
     justify-content: center;
-    position: static;
+    align-items: center;
+    visibility: hidden;
+    z-index: 10;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    text-align: center;
 }
 
 nav ul li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
-}
-
-nav ul li:last-child {
-    border-bottom: none;
+    margin: 15px 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #10564F;
-    font-size: 1.2em;
-    display: block;
-    padding: 10px;
-    transition: background-color 0.3s ease;
+    font-size: 1.5em;
 }
 
-nav ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+/* Sulje-nappi */
+button.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #10564F;
+}
+
+/* Responsiiviset tyylit */
+@media (min-width: 768px) {
+    /* Tablet-näkymä */
+    nav {
+        visibility: visible;
+        position: static;
+        background-color: transparent;
+        display: flex;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    header .hamburger {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Pöytäkone-näkymä */
+    header {
+        justify-content: flex-start;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
 }
 
 /* Pääosion tyylit */
@@ -84,14 +135,21 @@ h1 {
     font-size: 2.5em;
     margin: 20px 0;
 }
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+html, body {
+    overflow-x: hidden; /* Estää vaakasuoran vierityksen */
+    width: 100%; /* Varmistaa, että sisältö pysyy näytön sisällä */
 }
-
-/* Joustava sisältö */
+img {
+    max-width: 100%; /* Estää kuvien venymisen yli näytön leveyden */
+    height: auto; /* Säilyttää kuvasuhteen */
+    display: block; /* Estää turhat marginaalit */
+}
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center; /* Keskittää linkit */
+    }
+}
 .section {
     display: flex;
     flex-wrap: wrap;
@@ -101,12 +159,77 @@ img {
 }
 
 .section img {
+    width: 45%; /* Skaalaa kuva */
+    max-width: 400px; /* Rajoittaa liian suuriksi kasvamisen */
+}
+
+.section:nth-child(odd) img {
+    order: 1; /* Laittaa kuvan oikealle parittomilla osioilla */
+}
+
+.section:nth-child(even) img {
+    order: -1; /* Laittaa kuvan vasemmalle parillisilla osioilla */
+}
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+        text-align: center; /* Keskittää myös mahdollisesti väärin muotoillut linkit */
+        width: 100%;
+    }
+}
+nav ul li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Ohut viiva linkkien väliin */
+    padding: 10px 0;
+}
+
+nav ul li:last-child {
+    border-bottom: none; /* Poistaa viimeiseltä linkiltä viivan */
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Muuttaa taustaa hieman tummemmaksi hoverilla */
+    transition: background-color 0.3s ease;
+    display: block; /* Varmistaa, että koko linkkialue reagoi */
+    padding: 10px; /* Lisää vähän väljyyttä */
+}
+nav {
+    background-color: rgba(253, 188, 186, 0.6); /* Läpikuultava vaaleanpunainen */
+    backdrop-filter: blur(8px); /* Hieno sumea efekti taustalle */
+}
+nav {
+    background-color: rgba(253, 188, 186, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Safari-tuki */
+}
+@media (min-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: center; /* Keskittää linkit */
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.section img {
     width: 45%;
     max-width: 400px;
 }
 
 .section .text {
-    width: 50%;
+    width: 50%; /* Varmistaa, että teksti ja kuva ovat vierekkäin */
     text-align: left;
 }
 
@@ -114,45 +237,26 @@ img {
 .section:nth-child(even) {
     flex-direction: row-reverse;
 }
+.content-wrapper {
+    display: flex;
+    align-items: center; /* Kohdistaa sisällön keskelle pystysuunnassa */
+    gap: 20px; /* Pienentää kuvan ja tekstin väliä */
+    flex-wrap: wrap; /* Mahdollistaa rivinvaihdon mobiilissa */
+}
 
-/* Responsiiviset tyylit */
+.teksti {
+    width: 48%; /* Teksti vie puolet leveydestä */
+    text-align: left;
+}
+
+.kuva {
+    width: 48%; /* Kuva vie 50% leveydestä */
+    max-width: none;
+    height: auto;
+}
 @media (max-width: 767px) {
-    /* Hampurilaismenu mobiilissa */
-    .hamburger {
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        z-index: 1000;
-    }
-
-    nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 60%;
-        height: 100vh;
-        display: none;
-        text-align: right;
-        padding: 20px;
-    }
-
-    nav.show {
-        display: block; /* Näkyviin kun klikataan hampurilaismenua */
-    }
-
-    nav ul {
-        display: block;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 15px 0;
-    }
-
-    /* Layoutin muokkaus mobiilissa */
     .section {
-        flex-direction: column;
+        flex-direction: column !important;
         text-align: center;
     }
 
@@ -164,4 +268,25 @@ img {
         width: 100%;
         text-align: center;
     }
+}
+@media (max-width: 767px) {
+    .content-wrapper {
+        flex-direction: column; /* Pakottaa kuvan ja tekstin pinoon mobiilissa */
+        text-align: center;
+    }
+
+    .kuva {
+        width: 100%; /* Skaalaa kuvan leveämmäksi mobiilissa */
+    }
+
+    .teksti {
+        width: 100%; /* Teksti vie koko tilan mobiilissa */
+        text-align: center;
+    }
+}
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.content-wrapper:nth-child(even) {
+    flex-direction: row-reverse;
 }
