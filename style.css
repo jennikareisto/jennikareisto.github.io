@@ -199,3 +199,11 @@ img {
         flex-direction: row-reverse; /* Kuva oikealle, teksti vasemmalle */
     }
 }
+/* Isommilla näytöillä korjataan linkkien jälkeinen väri vastaamaan haluttua keltaista*/
+nav::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #FCE896; /* Sama väri kuin nav-palkissa */
+}
