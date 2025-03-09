@@ -13,55 +13,62 @@ header {
     background-color: #ffffff;
     padding: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Keskittää logon ja otsikon */
     align-items: center;
+    position: relative;
+    width: 100%;
+    text-align: center;
 }
 
 header .logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: auto;
+    height: 80px; /* Voit säätää korkeuden sopivaksi */
+    object-fit: contain;
 }
 
 /* Navigaatio */
 nav {
-    background-color: rgba(252, 232, 150, 0.4); /* Läpikuultava vaaleankeltainen */
+    background-color: rgba(252, 232, 150, 0.9); /* Vaaleankeltainen tausta */
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px); /* Safari-tuki */
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 50%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    z-index: 10;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Väli linkkien väliin */
 }
 
 nav ul li {
-    margin: 15px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 10px 0;
+    display: inline-block;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #10564F;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    display: block;
     transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Korjaa vihreän kaitaleen */
+nav::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #FCE896; /* Sama väri kuin nav-palkissa */
 }
 
 /* Hampurilaisvalikko */
@@ -107,7 +114,7 @@ button.close {
 
 @media (min-width: 1024px) {
     header {
-        justify-content: flex-start;
+        justify-content: center;
     }
 
     nav {
@@ -131,12 +138,13 @@ main {
 h1 {
     font-size: 2.5em;
     margin: 20px 0;
+    text-align: center;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+/* Kuvan ja tekstin perusasettelu */
+.kuva, .teksti {
+    width: 100%;
+    text-align: center;
 }
 
 /* Osioiden (teksti + kuva) tyyli */
@@ -155,12 +163,7 @@ img {
     gap: 20px;
     flex-wrap: wrap;
     width: 100%;
-}
-
-/* Kuvan ja tekstin leveys */
-.kuva, .teksti {
-    width: 100%;
-    text-align: center;
+    justify-content: center;
 }
 
 /* Kuvan ja tekstin asettelu tabletilla ja isommilla näytöillä */
@@ -170,11 +173,11 @@ img {
         text-align: left;
     }
 
-    .content-wrapper:nth-child(odd) {
+    .content-wrapper:nth-of-type(odd) {
         flex-direction: row; /* Kuva vasemmalle, teksti oikealle */
     }
 
-    .content-wrapper:nth-child(even) {
+    .content-wrapper:nth-of-type(even) {
         flex-direction: row-reverse; /* Kuva oikealle, teksti vasemmalle */
     }
 }
