@@ -271,7 +271,7 @@ nav::after {
 }
 @media (min-width: 768px) {
     .kuva img {
-        max-width: 500px; /*Rajataan kuvien liian isoa kokoa isoilla näytöillä*/
+        max-width: 350px; /*Rajataan kuvien liian isoa kokoa isoilla näytöillä*/
     }
 }
 @media (min-width: 1024px) {
