@@ -189,14 +189,16 @@ nav ul li a:hover {
     display: block; /* Varmistaa, että koko linkkialue reagoi */
     padding: 10px; /* Lisää vähän väljyyttä */
 }
+@media (min-width: 767px) {
 nav {
     background-color: rgba(252, 232, 150, 0.3); /* Läpikuultava vaaleankeltainen */
     backdrop-filter: blur(4px); /* Hieno sumea efekti taustalle */
 }
 nav {
-    background-color: rgba(252, 232, 150); /* Läpikuultava vaaleankeltainen */
+    background-color: rgba(252, 232, 150, 0.3); /* Läpikuultava vaaleankeltainen */
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px); /* Safari-tuki */
+}
 }
 @media (min-width: 768px) {
     nav {
