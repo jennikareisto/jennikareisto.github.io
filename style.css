@@ -207,3 +207,29 @@ nav::after {
     height: 5px;
     background-color: #FCE896; /* Sama väri kuin nav-palkissa */
 }
+/* Korjaa navigaation taustaväri pöytäkoneella */
+@media (min-width: 1024px) {
+    nav {
+        background-color: #FCE896 !important; /* Kiinteä keltainen tausta */
+    }
+
+    /* Keskitetään linkit pöytäkoneella */
+    nav ul {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+}
+
+/* Keskitetään logon pöytäkoneella */
+@media (min-width: 1024px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
