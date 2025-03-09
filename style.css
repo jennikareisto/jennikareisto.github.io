@@ -284,3 +284,6 @@ nav {
         text-align: center;
     }
 }
+.section:nth-child(even) {
+    flex-direction: row-reverse;
+}
