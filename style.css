@@ -301,18 +301,4 @@ nav {
         background-color: rgba(253, 188, 186, 0.9); /* Sama taustaväri, mutta kevyesti läpinäkyvä */
         text-align: right; /* Teksti oikealle */
         padding: 20px;
-    }
-
-    nav ul {
-        display: block;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 15px 0;
-    }
-
-    nav.show {
-        display: block; /* Näytetään kun menu avataan */
-    }
-}
+    }    
