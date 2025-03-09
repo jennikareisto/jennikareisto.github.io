@@ -240,18 +240,18 @@ nav {
 .content-wrapper {
     display: flex;
     align-items: center; /* Kohdistaa sisällön keskelle pystysuunnassa */
-    justify-content: space-between; /* Asettaa elementit vierekkäin */
+    gap: 20px; /* Pienentää kuvan ja tekstin väliä */
     flex-wrap: wrap; /* Mahdollistaa rivinvaihdon mobiilissa */
 }
 
 .teksti {
-    width: 50%; /* Teksti vie puolet leveydestä */
+    width: 48%; /* Teksti vie puolet leveydestä */
     text-align: left;
 }
 
 .kuva {
-    width: 50%; /* Kuva vie 50% leveydestä */
-    max-width: 400px;
+    width: 48%; /* Kuva vie 50% leveydestä */
+    max-width: none;
     height: auto;
 }
 @media (max-width: 767px) {
@@ -285,5 +285,8 @@ nav {
     }
 }
 .section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.content-wrapper:nth-child(even) {
     flex-direction: row-reverse;
 }
