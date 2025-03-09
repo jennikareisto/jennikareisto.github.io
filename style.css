@@ -306,3 +306,14 @@ nav {
         display: none; /* Piilottaa sulje-painikkeen tableteilla ja suuremmilla näytöillä */
     }
 }
+@media (min-width: 1024px) {
+    /* Joka toinen osio: kuva vasemmalle, teksti oikealle */
+    .content-wrapper:nth-child(odd) {
+        flex-direction: row;
+    }
+
+    /* Joka toinen osio: kuva oikealle, teksti vasemmalle */
+    .content-wrapper:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}
