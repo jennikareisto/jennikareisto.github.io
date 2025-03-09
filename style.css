@@ -250,7 +250,7 @@ nav {
 }
 
 .kuva {
-    width: 45%; /* Kuva vie 45% leveydestä */
+    width: 50%; /* Kuva vie 50% leveydestä */
     max-width: 400px;
     height: auto;
 }
@@ -276,7 +276,7 @@ nav {
     }
 
     .kuva {
-        width: 90%; /* Skaalaa kuvan leveämmäksi mobiilissa */
+        width: 100%; /* Skaalaa kuvan leveämmäksi mobiilissa */
     }
 
     .teksti {
