@@ -22,7 +22,7 @@ header {
 
 header .logo img {
     width: auto;
-    height: 80px; /* Voit säätää korkeuden sopivaksi */
+    height: none; /* Voit säätää korkeuden sopivaksi */
     object-fit: contain;
 }
 
