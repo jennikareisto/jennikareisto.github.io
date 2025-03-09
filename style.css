@@ -186,8 +186,6 @@ nav ul li {
 nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.1); /* Muuttaa taustaa hieman tummemmaksi hoverilla */
     transition: background-color 0.3s ease;
-    display: block; /* Varmistaa, että koko linkkialue reagoi */
-    padding: 10px; /* Lisää vähän väljyyttä */
 }
 nav {
     background-color: rgba(252, 232, 150, 0.3); /* Läpikuultava vaaleankeltainen */
