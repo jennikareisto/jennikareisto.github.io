@@ -194,13 +194,13 @@ nav ul li a:hover {
     padding: 10px; /* Lisää vähän väljyyttä */
 }
 nav {
-    background-color: rgba(253, 188, 186, 0.9); /* Läpikuultava vaaleanpunainen */
-    backdrop-filter: blur(5px); /* Hieno sumea efekti taustalle */
+    background-color: rgba(253, 188, 186, 0.6); /* Läpikuultava vaaleanpunainen */
+    backdrop-filter: blur(8px); /* Hieno sumea efekti taustalle */
 }
 nav {
-    background-color: rgba(253, 188, 186, 0.9);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px); /* Safari-tuki */
+    background-color: rgba(253, 188, 186, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px); /* Safari-tuki */
 }
 @media (min-width: 768px) {
     nav {
