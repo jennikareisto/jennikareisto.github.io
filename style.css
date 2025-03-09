@@ -183,10 +183,6 @@ nav ul li {
     padding: 10px 0;
 }
 
-nav ul li:last-child {
-    border-bottom: none; /* Poistaa viimeiseltä linkiltä viivan */
-}
-
 nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.1); /* Muuttaa taustaa hieman tummemmaksi hoverilla */
     transition: background-color 0.3s ease;
@@ -194,11 +190,11 @@ nav ul li a:hover {
     padding: 10px; /* Lisää vähän väljyyttä */
 }
 nav {
-    background-color: #FCE896; /* Läpikuultava vaaleanpunainen */
+    background-color: rgba(252, 232, 150, 0.3); /* Läpikuultava vaaleankeltainen */
     backdrop-filter: blur(8px); /* Hieno sumea efekti taustalle */
 }
 nav {
-    background-color: #FCE896;
+    background-color: rgba(252, 232, 150, 0.3); /* Läpikuultava vaaleankeltainen */
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px); /* Safari-tuki */
 }
