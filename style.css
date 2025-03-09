@@ -303,9 +303,4 @@ nav::after {
         margin: 0; /* Poistetaan epätasaiset välit */
     }
 }
-.kuva, .teksti {
-    flex: 1; /* Säädetään sisältö joustavaksi */
-    min-width: 300px; /* Estää liian pienen tilan */
-    max-width: 50%; /* Pitää elementit siististi puoliksi */
-}
 
