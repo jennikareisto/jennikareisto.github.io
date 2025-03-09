@@ -304,6 +304,6 @@ nav::after {
 }
 @media (min-width: 768px) {
     .kuva {
-        max-width: 300px; /* Pienempi kuva tietokoneella */
+        max-width: 500px; /* Pienempi kuva tietokoneella */
     }
 }
