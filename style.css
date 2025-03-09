@@ -19,7 +19,7 @@ header {
 
 /* Otsikon kuvan koko suuremmaksi */
 header .logo img {
-    width: 300px; /* Muuta kokoa tarpeen mukaan */
+    width: 500px; /* Muuta kokoa tarpeen mukaan */
     height: auto;
     display: block;
 }
