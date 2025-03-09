@@ -5,51 +5,29 @@ body {
     color: #ffffff; /* Valkoinen teksti */
     margin: 0;
     padding: 0;
+    overflow-x: hidden; /* Estää vaakasuoran vierityksen */
 }
 
 /* Headerin tyylit */
 header {
-    background-color: #ffffff; 
-    color: #ffffff;
+    background-color: #ffffff;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Logo, jossa kuva */
 header .logo img {
-    max-height: none; /* Rajaa logon korkeutta */
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-/* Headerin muotoilu */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-/* Hampurilaisvalikon tyylit */
-button.hamburger {
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: black;
-}
-
-/* Mobiilinavigaatio */
+/* Navigaatio */
 nav {
-    background-color: #FCE896; /* Vaaleankeltainen tausta */
+    background-color: rgba(252, 232, 150, 0.4); /* Läpikuultava vaaleankeltainen */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); /* Safari-tuki */
     padding: 20px;
     position: fixed;
     top: 0;
@@ -71,12 +49,27 @@ nav ul {
 
 nav ul li {
     margin: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #10564F;
     font-size: 1.5em;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Hampurilaisvalikko */
+button.hamburger {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: black;
 }
 
 /* Sulje-nappi */
@@ -90,9 +83,8 @@ button.close {
     color: #10564F;
 }
 
-/* Responsiiviset tyylit */
+/* Responsiivinen navigaatio */
 @media (min-width: 768px) {
-    /* Tablet-näkymä */
     nav {
         visibility: visible;
         position: static;
@@ -108,15 +100,20 @@ button.close {
         margin: 0 20px;
     }
 
-    header .hamburger {
+    button.hamburger, button.close {
         display: none;
     }
 }
 
 @media (min-width: 1024px) {
-    /* Pöytäkone-näkymä */
     header {
         justify-content: flex-start;
+    }
+
+    nav {
+        background-color: #FCE896; /* Kiinteä vaaleankeltainen ilman läpikuultavuutta */
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
 
     nav ul li a {
@@ -124,196 +121,60 @@ button.close {
     }
 }
 
-/* Pääosion tyylit */
+/* Pääsisältö */
 main {
     padding: 20px;
     text-align: center;
-    background-color: #FCE896; /* Vaalean keltainen tausta */
+    background-color: #FCE896;
 }
 
 h1 {
     font-size: 2.5em;
     margin: 20px 0;
 }
-html, body {
-    overflow-x: hidden; /* Estää vaakasuoran vierityksen */
-    width: 100%; /* Varmistaa, että sisältö pysyy näytön sisällä */
-}
+
 img {
-    max-width: 100%; /* Estää kuvien venymisen yli näytön leveyden */
-    height: auto; /* Säilyttää kuvasuhteen */
-    display: block; /* Estää turhat marginaalit */
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
-@media (min-width: 768px) {
-    nav ul {
-        display: flex;
-        justify-content: center; /* Keskittää linkit */
-    }
-}
+
+/* Osioiden (teksti + kuva) tyyli */
 .section {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-}
-
-.section img {
-    width: 45%; /* Skaalaa kuva */
-    max-width: 400px; /* Rajoittaa liian suuriksi kasvamisen */
-}
-
-.section:nth-child(odd) img {
-    order: 1; /* Laittaa kuvan oikealle parittomilla osioilla */
-}
-
-.section:nth-child(even) img {
-    order: -1; /* Laittaa kuvan vasemmalle parillisilla osioilla */
-}
-@media (min-width: 768px) {
-    nav ul {
-        display: flex;
-        justify-content: center;
-        text-align: center; /* Keskittää myös mahdollisesti väärin muotoillut linkit */
-        width: 100%;
-    }
-}
-nav ul li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Ohut viiva linkkien väliin */
-    padding: 10px 0;
-}
-
-nav ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Muuttaa taustaa hieman tummemmaksi hoverilla */
-    transition: background-color 0.3s ease;
-}
-nav {
-    background-color: rgba(252, 232, 150, 0.4); /* Läpikuultava vaaleankeltainen */
-    backdrop-filter: blur(4px); /* Hieno sumea efekti taustalle */
-}
-nav {
-    background-color: rgba(252, 232, 150, 0.4); /* Läpikuultava vaaleankeltainen */
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px); /* Safari-tuki */
-}
-@media (min-width: 768px) {
-    nav {
-        display: flex;
-        justify-content: center; /* Keskittää linkit */
-        width: 100%;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-}
-.section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
 
-.section img {
-    width: 45%;
-    max-width: 400px;
-}
-
-.section .text {
-    width: 50%; /* Varmistaa, että teksti ja kuva ovat vierekkäin */
-    text-align: left;
-}
-
-/* Vaihdetaan joka toisella osalla kuvien ja tekstin paikkaa */
-.section:nth-child(even) {
-    flex-direction: row-reverse;
-}
+/* Sisältölaatikoiden tyyli */
 .content-wrapper {
     display: flex;
-    align-items: center; /* Kohdistaa sisällön keskelle pystysuunnassa */
-    gap: 20px; /* Pienentää kuvan ja tekstin väliä */
-    flex-wrap: wrap; /* Mahdollistaa rivinvaihdon mobiilissa */
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.teksti {
-    width: 48%; /* Teksti vie puolet leveydestä */
-    text-align: left;
+/* Kuvan ja tekstin leveys */
+.kuva, .teksti {
+    width: 100%;
+    text-align: center;
 }
 
-.kuva {
-    width: 48%; /* Kuva vie 50% leveydestä */
-    max-width: none;
-    height: auto;
-}
-@media (max-width: 767px) {
-    .section {
-        flex-direction: column !important;
-        text-align: center;
+/* Kuvan ja tekstin asettelu tabletilla ja isommilla näytöillä */
+@media (min-width: 768px) {
+    .kuva, .teksti {
+        width: 48%;
+        text-align: left;
     }
 
-    .section img {
-        width: 90%;
-    }
-
-    .section .text {
-        width: 100%;
-        text-align: center;
-    }
-}
-@media (max-width: 767px) {
-    .content-wrapper {
-        flex-direction: column; /* Pakottaa kuvan ja tekstin pinoon mobiilissa */
-        text-align: center;
-    }
-
-    .kuva {
-        width: 100%; /* Skaalaa kuvan leveämmäksi mobiilissa */
-    }
-
-    .teksti {
-        width: 100%; /* Teksti vie koko tilan mobiilissa */
-        text-align: center;
-    }
-}
-.section:nth-child(even) {
-    flex-direction: row-reverse;
-}
-.content-wrapper:nth-child(even) {
-    flex-direction: row-reverse;
-}
-@media (min-width: 1024px) {
-    nav {
-        background-color: #FCE896; /* Kiinteä vaaleankeltainen ilman läpikuultavuutta */
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-    }
-}
-/* Joka toinen kuva vasemmalle, joka toinen oikealle (kaikilla sivuilla) */
-@media (min-width: 1024px) {
-    .sisältö:nth-child(odd) .content-wrapper {
+    .content-wrapper:nth-child(odd) {
         flex-direction: row; /* Kuva vasemmalle, teksti oikealle */
     }
 
-    .sisältö:nth-child(even) .content-wrapper {
-        flex-direction: row-reverse; /* Kuva oikealle, teksti vasemmalle */
-    }
-}
-@media (min-width: 768px) {
-    button.close {
-        display: none; /* Piilottaa sulje-painikkeen tableteilla ja suuremmilla näytöillä */
-    }
-}
-@media (min-width: 1024px) {
-    /* Joka toinen osio: kuva vasemmalle, teksti oikealle */
-    .content-wrapper:nth-child(odd) {
-        flex-direction: row;
-    }
-
-    /* Joka toinen osio: kuva oikealle, teksti vasemmalle */
     .content-wrapper:nth-child(even) {
-        flex-direction: row-reverse;
+        flex-direction: row-reverse; /* Kuva oikealle, teksti vasemmalle */
     }
 }
