@@ -194,11 +194,11 @@ nav ul li a:hover {
     padding: 10px; /* Lisää vähän väljyyttä */
 }
 nav {
-    background-color: rgba(253, 188, 186, 0.6); /* Läpikuultava vaaleanpunainen */
+    background-color: #FCE896; /* Läpikuultava vaaleanpunainen */
     backdrop-filter: blur(8px); /* Hieno sumea efekti taustalle */
 }
 nav {
-    background-color: rgba(253, 188, 186, 0.6);
+    background-color: #FCE896;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px); /* Safari-tuki */
 }
