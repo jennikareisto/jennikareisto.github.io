@@ -1,73 +1,91 @@
-/* Yleiset tyylit */
+/* Perustyylit koko sivulle */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #10564F;
-    color: #ffffff;
+    background-color: #10564F; /* Taustaväri tumman vihreä */
+    color: #ffffff; /* Valkoinen teksti */
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: hidden; /* Estää vaakasuoran vierityksen */
 }
 
-/* Header */
+/* Headerin tyylit */
 header {
     background-color: #ffffff;
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Keskittää logon */
     align-items: center;
 }
 
+/* Otsikon kuvan koko suuremmaksi */
 header .logo img {
-    width: 300px;
+    width: 500px; /* Muuta kokoa tarpeen mukaan */
     height: auto;
     display: block;
 }
 
-/* Navigaatio (Mobiili, piilotettu oletuksena) */
-#mobile-nav {
-    background-color: rgba(252, 232, 150, 0.9);
+/* Navigaatio */
+nav {
+    background-color: rgba(252, 232, 150, 0.4); /* Läpikuultava vaaleankeltainen */
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); /* Safari-tuki */
     padding: 20px;
     position: fixed;
     top: 0;
     right: 0;
     width: 50%;
     height: 50%;
-    display: none;
-    flex-direction: column;
+    display: flex;
     justify-content: center;
     align-items: center;
+    visibility: hidden;
     z-index: 10;
 }
 
-#mobile-nav ul {
-    list-style: none;
+/* Keskitetään linkit ja estetään kahdelle riville meno */
+nav ul {
+    list-style-type: none;
     padding: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#mobile-nav ul li {
+nav ul li {
     margin: 10px 0;
+    white-space: nowrap; /* Estää kaksisanaisia menemästä kahdelle riville */
 }
 
-#mobile-nav ul li a {
+nav ul li a {
     text-decoration: none;
     color: #10564F;
     font-size: 1.5em;
+    transition: background-color 0.3s ease;
 }
 
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Korjaa vihreän kaitaleen */
+nav::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #FCE896; /* Sama väri kuin nav-palkissa */
+}
+
+/* Hampurilaisvalikko */
 button.hamburger {
     font-size: 30px;
     background: none;
     border: none;
     color: black;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
 }
 
+/* Sulje-nappi */
 button.close {
     position: absolute;
     top: 10px;
@@ -76,30 +94,44 @@ button.close {
     background: none;
     border: none;
     color: #10564F;
-    cursor: pointer;
 }
 
-/* Navigaatio (Pöytäkone) */
-#desktop-nav {
-    background-color: #FCE896;
-    width: 100%;
-    padding: 20px 0;
-    display: none; /* Piilotetaan mobiilissa */
-    justify-content: center;
+/* Responsiivinen navigaatio */
+@media (min-width: 768px) {
+    nav {
+        visibility: visible;
+        position: static;
+        background-color: transparent;
+    }
+
+    nav ul {
+        flex-direction: row; /* Linkit rinnakkain */
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    button.hamburger, button.close {
+        display: none;
+    }
 }
 
-#desktop-nav ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    gap: 30px;
-}
+@media (min-width: 1024px) {
+    header {
+        justify-content: flex-start;
+    }
 
-#desktop-nav ul li a {
-    text-decoration: none;
-    color: #10564F;
-    font-size: 1.5em;
+    nav {
+        background-color: #FCE896; /* Kiinteä vaaleankeltainen ilman läpikuultavuutta */
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
 }
 
 /* Pääsisältö */
@@ -120,11 +152,19 @@ img {
     display: block;
 }
 
-/* Osioiden asettelu */
-.content-wrapper {
+/* Osioiden (teksti + kuva) tyyli */
+.section {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Sisältölaatikoiden tyyli */
+.content-wrapper {
+    display: flex;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
     width: 100%;
@@ -136,30 +176,13 @@ img {
     text-align: center;
 }
 
-/* Pöytäkoneen muotoilut */
-@media (min-width: 1024px) {
-    /* Header */
-    header {
-        justify-content: center;
-    }
-
-    /* Piilotetaan mobiilinavigaatio ja näytetään pöytäkoneversio */
-    #mobile-nav {
-        display: none;
-    }
-
-    #desktop-nav {
-        display: flex;
-    }
-
-    /* Linkkien asettelu keskelle */
-    #desktop-nav ul {
-        justify-content: center;
-    }
-
-    /* Kuva ja teksti vierekkäin */
+/* Kuvan ja tekstin asettelu tabletilla ja isommilla näytöillä */
+@media (min-width: 768px) {
     .content-wrapper {
-        flex-wrap: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
     }
 
     .kuva, .teksti {
@@ -167,12 +190,12 @@ img {
         text-align: left;
     }
 
-    /* Vuorotteleva layout osioille */
+    /* Korjattu vuorottelu, nyt se vaikuttaa suoraan content-wrapperiin */
     section:nth-child(odd) .content-wrapper {
-        flex-direction: row;
+        flex-direction: row; /* Kuva vasemmalle, teksti oikealle */
     }
 
     section:nth-child(even) .content-wrapper {
-        flex-direction: row-reverse;
+        flex-direction: row-reverse; /* Kuva oikealle, teksti vasemmalle */
     }
 }
