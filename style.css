@@ -237,10 +237,3 @@ nav {
 .section:nth-child(even) {
     flex-direction: row-reverse;
 }
-nav {
-    position: fixed;
-    top: 0;
-    right: 0; /* Siirretään valikko oikealle */
-    left: auto; /* Poistetaan vasemmalta ankkurointi */
-    width: 60%; /* Voit säätää leveyttä */
-}
