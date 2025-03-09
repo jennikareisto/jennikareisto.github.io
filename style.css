@@ -135,5 +135,39 @@ h1 {
     font-size: 2.5em;
     margin: 20px 0;
 }
+html, body {
+    overflow-x: hidden; /* Estää vaakasuoran vierityksen */
+    width: 100%; /* Varmistaa, että sisältö pysyy näytön sisällä */
+}
+img {
+    max-width: 100%; /* Estää kuvien venymisen yli näytön leveyden */
+    height: auto; /* Säilyttää kuvasuhteen */
+    display: block; /* Estää turhat marginaalit */
+}
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center; /* Keskittää linkit */
+    }
+}
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 
+.section img {
+    width: 45%; /* Skaalaa kuva */
+    max-width: 400px; /* Rajoittaa liian suuriksi kasvamisen */
+}
+
+.section:nth-child(odd) img {
+    order: 1; /* Laittaa kuvan oikealle parittomilla osioilla */
+}
+
+.section:nth-child(even) img {
+    order: -1; /* Laittaa kuvan vasemmalle parillisilla osioilla */
+}
 
