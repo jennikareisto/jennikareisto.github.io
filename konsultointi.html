@@ -10,18 +10,15 @@
 </head>
 <body>
 
-   
     <header>
         <div class="logo">
             <a href="index.html"><img src="otsikko.png" alt="Yrityksen Logo"></a>
         </div>
-        <!-- Mobiiliversion hampurilaisvalikko -->
         <button class="hamburger" aria-label="Avaa valikko">
             ☰
         </button>
     </header>
-    
-    <!-- Mobiilinavigaatio (lisätään JavaScriptin avulla dynaamisesti näkyviin) -->
+
     <nav id="mobile-nav" hidden>
         <button class="close" aria-label="Sulje valikko">x</button>
         <ul>
@@ -31,51 +28,63 @@
             <li><a href="mejahkailijat.html">Me jahkailijat</a></li>
         </ul>
     </nav>
-    
-    <!-- Pääsivu, jossa tervetulo-otsikko -->
     <main>
-        <section id="home">
+        <section>
             <div class="content-wrapper">
                 <img class="kuva" src="etusivunkuva.jpg" alt="Etusivun kuva">
                 <div class="teksti">
-                  <h1>Me mietimme sen puolestasi!</h1>
-                  <p>Etusivulle tulee esittely yrityksestä ja sen tarjoamista palveluista, sekä tietenkin jahkailijoista.</p>
-                  <p>Etusivulle tulee esittely yrityksestä ja sen tarjoamista palveluista, sekä tietenkin jahkailijoista.</p>
-                  <p>Etusivulle tulee esittely yrityksestä ja sen tarjoamista palveluista, sekä tietenkin jahkailijoista.</p>
-                  <p>Etusivulle tulee esittely yrityksestä ja sen tarjoamista palveluista, sekä tietenkin jahkailijoista.</p>
-                  <p>Etusivulle tulee esittely yrityksestä ja sen tarjoamista palveluista, sekä tietenkin jahkailijoista.</p>
-                  <p>Etusivulle tulee esittely yrityksestä ja sen tarjoamista palveluista, sekä tietenkin jahkailijoista.</p>
-                  <p>Etusivulle tulee esittely yrityksestä ja sen tarjoamista palveluista, sekä tietenkin jahkailijoista.</p>
+                    <h1>Me mietimme sen puolestasi!</h1>
+                    <p>Sivuston aiheena on yrityksen Jannin Jahkailutoimisto Oy nettisivut. Yrityksen nettisivut 
+                        on suunni- teltu keskittymään kolmeen pääasialliseen palvelualueeseen: yritysjohdon konsultointi, 
+                        taloushallin- non palvelut ja tapahtumasuunnittelu. Sivuston keskiössä on tarjota kattava esittely 
+                        näistä palve- luista, korostaen kunkin osa-alueen asiantuntijuutta ja arvoa, sekä mitä ne tuovat 
+                        asiakkaille. Palveluiden kuvaukset sisältävät tarjottavien palveluiden yksityiskohdat, 
+                        asiantuntijatiimin esittelyt ja menestystarinoita aikaisemmista toimeksiannoista.
+                    </p>
+                    <p>
+                        Sivuston tavoite on toimia informatiivisena alustana potentiaalisille asiakkaille, esittelemällä 
+                        yrityksen tarjoamia palveluita ja asiantuntemusta. Sivusto toimii yrityksen digitaalisena käyntikorttina 
+                        potentiaalisille yhteistyökumppaneille, esitellen yrityksen arvoja, kulttuuria ja verkostoitumismahdolli- 
+                        suuksia. Lisäksi sivusto on suunniteltu avuksi nykyisten ja potentiaalisten asiakkaiden sekä 
+                        yhteistyökumppaneiden verkostoitumiseen, tarjoten mahdollisuuksia vuorovaikutukseen ja yhteydenpitoon.
+                    </p>
+                </div>   
+            </div>    
+        </section>  
+
+        <section>
+            <div class="content-wrapper">
+                <img class="kuva" src="dino.jpg" alt="Toinen kuva">
+                <div class="teksti">
+                    <h2>Olisiko teillä meille pähkinä purtavaksi?</h2>
+                    <p>Kohderyhmänä ovat eri toimialojen pienet ja keskisuuret yritykset. Erityisesti sivusto pyrkii tavoittamaan 
+                        yrityksiä, jotka voivat hyötyä yritysjohdon konsultoinnista, taloushallinnon palveluista tai 
+                        tapahtumasuunnittelusta. Tämä tavoiteltu kohderyhmä arvostaa tehokkaita ja räätälöityjä ratkaisuja, 
+                        jotka tukevat heidän liiketoimintansa kasvua ja kehitystä. Näihin osa-alueisiin keskittyminen auttaa 
+                        sivustoa erottumaan kilpailijoista sekä toimimaan tehok- kaana apuvälineenä yrityksen liiketoiminnan 
+                        laajentamisessa ja verkostojen luomisessa.
+                    </p>
+                    <p>Etusivun keskiössä on tarjota kattava esittely yrityksestä ja sen tarjoamista palveluista: 
+                        yritysjohdon konsultoinnista, taloushallinnon palveluista ja tapahtumasuunnittelusta. Etusivulla 
+                        hyödynnetään lyhyttä ja iskevää lausetta ”Me mietimme sen puolestasi!”, jolla pyritään viestimään 
+                        palveluiden ydinsanoma. Sivustoilla toistuu selkeä ja leikkisä teema kuvien, otsikoiden sekä värien 
+                        valinnoissa.
+                    </p>
+                    <p>
+                        Navigaatiovalikko on toteutettu mobiilissa hampurilaisvalikolla. Hampurilaisvalikko liukuu auki 
+                        klikatessa, ja siitä avautuu mahdollisuus sivustojen väliseen siirtymään: <strong>Konsultointi</strong>, 
+                        <strong>Taloushallinto</strong>, <strong>Tapahtumat</strong> ja <strong>Me Jahkailijat</strong>. Navigaatiovalikko on mahdollista sulkea 
+                        ”x”-painikkeesta. Yrityksen nimeä klikkaamalla näkymä siirtyy etusivulle.
+                    </p>
                 </div>   
             </div>    
         </section>
     </main>
 
-    <main>
-        <section id="home">
-            <div class="content-wrapper">
-                <img class="kuva" src="Kuva1.jpg" alt="Etusivun kuva">
-                <div class="teksti">
-                  <h2>Me mietimme sen puolestasi!</h2>
-                  <p>Me tarjoamme asiantuntevia palveluja eri aloilla. Me tarjoamme asiantuntevia palveluja eri aloilla.</p>
-                  <p>Me tarjoamme asiantuntevia palveluja eri aloilla. Me tarjoamme asiantuntevia palveluja eri aloilla.</p>
-                  <p>Me tarjoamme asiantuntevia palveluja eri aloilla. Me tarjoamme asiantuntevia palveluja eri aloilla.</p>
-                  <p>Me tarjoamme asiantuntevia palveluja eri aloilla. Me tarjoamme asiantuntevia palveluja eri aloilla.</p>
-                  <p>Me tarjoamme asiantuntevia palveluja eri aloilla. Me tarjoamme asiantuntevia palveluja eri aloilla.</p>
-                  <p>Me tarjoamme asiantuntevia palveluja eri aloilla. Me tarjoamme asiantuntevia palveluja eri aloilla.</p>
-                  <p>Me tarjoamme asiantuntevia palveluja eri aloilla. Me tarjoamme asiantuntevia palveluja eri aloilla.</p>
-                  <p>Me tarjoamme asiantuntevia palveluja eri aloilla. Me tarjoamme asiantuntevia palveluja eri aloilla.</p>
-                </div>   
-            </div>    
-        </section>
-    </main>
-    
-    <!-- Alatunniste (footer) -->
     <footer>
         <p>&copy; Jannin Jahkailutoimisto Oy Ab</p>
     </footer>
 
-    <!-- Linkki JavaScriptiin -->
     <script src="script.js"></script>
 
 </body>
