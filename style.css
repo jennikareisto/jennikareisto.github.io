@@ -64,6 +64,19 @@ nav ul li a {
     transition: background-color 0.3s ease;
 }
 
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Korjaa vihreän kaitaleen */
+nav::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #FCE896; /* Sama väri kuin nav-palkissa */
+}
+
 /* Hampurilaisvalikko */
 button.hamburger {
     font-size: 30px;
