@@ -24,7 +24,7 @@ header .logo img {
     display: block;
 }
 
-/* Navigaatio */
+/* Navigaatio mobiilissa*/
 nav {
     background-color: rgba(252, 232, 150, 0.4); /* Läpikuultava vaaleankeltainen */
     backdrop-filter: blur(4px);
