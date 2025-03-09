@@ -3,7 +3,8 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #10564F; /* Taustaväri tumman vihreä */
     color: #ffffff; /* Valkoinen teksti */
-    margin: 0;
+    margin: 0 auto; /* auto lisäys */
+    max-width: 1200px; /* muutos */
     padding: 0;
     overflow-x: hidden; /* Estää vaakasuoran vierityksen */
 }
@@ -301,4 +302,14 @@ nav::after {
     nav ul li {
         margin: 0; /* Poistetaan epätasaiset välit */
     }
+}
+.kuva, .teksti {
+    flex: 1; /* Säädetään sisältö joustavaksi */
+    min-width: 300px; /* Estää liian pienen tilan */
+    max-width: 50%; /* Pitää elementit siististi puoliksi */
+}
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
