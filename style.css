@@ -170,4 +170,11 @@ img {
 .section:nth-child(even) img {
     order: -1; /* Laittaa kuvan vasemmalle parillisilla osioilla */
 }
-
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+        text-align: center; /* Keskittää myös mahdollisesti väärin muotoillut linkit */
+        width: 100%;
+    }
+}
