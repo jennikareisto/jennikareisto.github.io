@@ -242,19 +242,21 @@ nav::after {
         display: flex;
         justify-content: center; /* Keskittää linkit */
         align-items: center;
+        padding: 10px 0; /* Lisää vähän tilaa */
     }
 
     nav ul {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: auto; /* Poistetaan 100%, jotta se ei venytä */
+        gap: 40px; /* Lisää väliä linkkien välille */
         padding: 0;
         margin: 0;
+        list-style: none;
     }
 
     nav ul li {
-        margin: 0 20px; /* Tasaiset välit linkeille */
+        margin: 0; /* Tasaiset välit linkeille */
     }
 }
 @media (min-width: 1024px) {
