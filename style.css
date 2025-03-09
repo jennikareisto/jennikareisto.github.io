@@ -213,6 +213,7 @@ nav::after {
         background-color: #FCE896 !important; /* Kiinteä keltainen tausta */
     }
 
+
     /* Keskitetään linkit pöytäkoneella */
     nav ul {
         display: flex;
@@ -231,5 +232,25 @@ nav::after {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+nav::after {
+    background-color: #FCE896 !important; /* Poistaa vihreän kaistaleen */
+}
+@media (min-width: 1024px) {
+    nav {
+        display: flex;
+        justify-content: center; /* Keskittää linkit */
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        width: auto; /* Poista 100 %, jos se venyttää liikaa */
+    }
+
+    nav ul li {
+        margin: 0 20px;
     }
 }
