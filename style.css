@@ -247,10 +247,23 @@ nav::after {
     nav ul {
         display: flex;
         justify-content: center;
-        width: auto; /* Poista 100 %, jos se venyttää liikaa */
+        align-items: center;
+        width: auto; /* Poistetaan 100%, jotta se ei venytä */
+        padding: 0;
+        margin: 0;
     }
 
     nav ul li {
-        margin: 0 20px;
+        margin: 0 20px; /* Tasaiset välit linkeille */
+    }
+}
+@media (min-width: 1024px) {
+    nav {
+        background-color: #FCE896 !important; /* Pakotetaan keltainen */
+    }
+
+    nav::after {
+        background-color: #FCE896 !important; /* Sama keltainen väri */
+        display: none; /* Piilotetaan turha viiva */
     }
 }
