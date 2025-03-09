@@ -274,3 +274,36 @@ nav::after {
         max-width: 300px; /*Rajataan kuvien liian isoa kokoa isoilla näytöillä*/
     }
 }
+@media (min-width: 1024px) {
+    nav {
+        background-color: #FCE896 !important; /* Kiinteä keltainen tausta */
+        width: 100%; /* Kattaa koko yläosan */
+    }
+}
+@media (min-width: 1024px) {
+    nav {
+        display: flex;
+        justify-content: center; /* Täydellinen keskitys */
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px; /* Väliä linkkien välille */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 0; /* Poistetaan epätasaiset välit */
+    }
+}
+@media (min-width: 768px) {
+    .kuva {
+        max-width: 300px; /* Pienempi kuva tietokoneella */
+    }
+}
