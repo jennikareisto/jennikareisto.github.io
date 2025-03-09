@@ -291,3 +291,13 @@ nav {
         -webkit-backdrop-filter: none;
     }
 }
+/* Joka toinen kuva vasemmalle, joka toinen oikealle (kaikilla sivuilla) */
+@media (min-width: 1024px) {
+    .sisältö:nth-child(odd) .content-wrapper {
+        flex-direction: row; /* Kuva vasemmalle, teksti oikealle */
+    }
+
+    .sisältö:nth-child(even) .content-wrapper {
+        flex-direction: row-reverse; /* Kuva oikealle, teksti vasemmalle */
+    }
+}
