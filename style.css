@@ -301,3 +301,8 @@ nav {
         flex-direction: row-reverse; /* Kuva oikealle, teksti vasemmalle */
     }
 }
+@media (min-width: 768px) {
+    button.close {
+        display: none; /* Piilottaa sulje-painikkeen tableteilla ja suuremmilla näytöillä */
+    }
+}
