@@ -308,8 +308,4 @@ nav::after {
     min-width: 300px; /* Estää liian pienen tilan */
     max-width: 50%; /* Pitää elementit siististi puoliksi */
 }
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-}
+
