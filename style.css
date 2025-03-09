@@ -237,3 +237,20 @@ nav {
 .section:nth-child(even) {
     flex-direction: row-reverse;
 }
+.content-wrapper {
+    display: flex;
+    align-items: center; /* Kohdistaa sisällön keskelle pystysuunnassa */
+    justify-content: space-between; /* Asettaa elementit vierekkäin */
+    flex-wrap: wrap; /* Mahdollistaa rivinvaihdon mobiilissa */
+}
+
+.teksti {
+    width: 50%; /* Teksti vie puolet leveydestä */
+    text-align: left;
+}
+
+.kuva {
+    width: 45%; /* Kuva vie 45% leveydestä */
+    max-width: 400px;
+    height: auto;
+}
