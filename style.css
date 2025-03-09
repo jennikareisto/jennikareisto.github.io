@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #10564F; /* Taustaväri tumman vihreä */
     color: #ffffff; /* Valkoinen teksti */
-    margin_ 0;
+    margin: 0;
     padding: 0;
     overflow-x: hidden; /* Estää vaakasuoran vierityksen */
 }
