@@ -284,3 +284,10 @@ nav {
 .content-wrapper:nth-child(even) {
     flex-direction: row-reverse;
 }
+@media (min-width: 1024px) {
+    nav {
+        background-color: #FCE896; /* Kiinteä vaaleankeltainen ilman läpikuultavuutta */
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
