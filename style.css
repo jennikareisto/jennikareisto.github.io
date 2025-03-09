@@ -271,7 +271,7 @@ nav::after {
 }
 @media (min-width: 768px) {
     .kuva img {
-        max-width: 300px; /*Rajataan kuvien liian isoa kokoa isoilla näytöillä*/
+        max-width: 500px; /*Rajataan kuvien liian isoa kokoa isoilla näytöillä*/
     }
 }
 @media (min-width: 1024px) {
@@ -300,10 +300,5 @@ nav::after {
 
     nav ul li {
         margin: 0; /* Poistetaan epätasaiset välit */
-    }
-}
-@media (min-width: 768px) {
-    .kuva {
-        max-width: 500px; /* Pienempi kuva tietokoneella */
     }
 }
