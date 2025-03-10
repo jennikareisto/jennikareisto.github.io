@@ -332,9 +332,12 @@ nav::after {
 }
 
 .faq-answer {
-    display: none; /* Piilotetaan aluksi */
-    padding: 10px;
+    display: none;
+    padding: 15px; /* Lisää vähän sisätilaa */
     background: #fff;
     color: #333;
-    border-left: 4px solid #10564F; /* Korostusviiva */
+    border-left: 4px solid #10564F;
+    margin: 0; /* Poistetaan ylimääräinen marginaali */
+    width: 100%; /* Vastaus venyy nyt täyteen leveyteen */
+    box-sizing: border-box; /* Varmistaa, että leveys sisältää myös borderin */
 }
