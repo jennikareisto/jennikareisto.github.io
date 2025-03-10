@@ -334,7 +334,7 @@ nav::after {
 .faq-answer {
     display: none;
     padding: 15px; /* Lisää vähän sisätilaa */
-    background: #fff;
+    background: #FCE896;
     color: #333;
     border-left: 4px solid #10564F;
     margin: 0; /* Poistetaan ylimääräinen marginaali */
