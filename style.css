@@ -302,4 +302,39 @@ nav::after {
         margin: 0; /* Poistetaan epätasaiset välit */
     }
 }
+/* FAQ-osion tyylit */
+.faq {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.faq-question {
+    background: #FCE896; /* Vaaleankeltainen */
+    color: #10564F; /* Tummanvihreä */
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #e5d285; /* Tummempi keltainen hoverilla */
+}
+
+.faq-answer {
+    display: none; /* Piilotetaan aluksi */
+    padding: 10px;
+    background: #fff;
+    color: #333;
+    border-left: 4px solid #10564F; /* Korostusviiva */
+}
