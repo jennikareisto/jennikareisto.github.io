@@ -341,3 +341,15 @@ nav::after {
     width: 100%; /* Vastaus venyy nyt täyteen leveyteen */
     box-sizing: border-box; /* Varmistaa, että leveys sisältää myös borderin */
 }
+/* Tällä määritellään kuva päällekäin myös laajemmilla näytöillä! */
+@media (min-width: 1024px) {
+    .stacked-layout .content-wrapper {
+        flex-direction: column !important; /* Pakottaa päällekkäisen asettelun vain isommilla näytöillä */
+    }
+
+    .stacked-layout .kuva, 
+    .stacked-layout .teksti {
+        width: 100%; /* Molemmat koko leveydelle */
+        text-align: center; /* Keskittää tekstin */
+    }
+}
