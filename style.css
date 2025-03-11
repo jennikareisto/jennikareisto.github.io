@@ -2,7 +2,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #10564F; /* Taustaväri tumman vihreä */
-    color: #ffffff; /* Valkoinen teksti */
+    color: #10564F; /* Fontin väri */
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Estää vaakasuoran vierityksen */
@@ -349,7 +349,7 @@ nav::after {
 
     .stacked-layout .kuva, 
     .stacked-layout .teksti {
-        width: 80%; /* Molemmat koko leveydelle */
+        width: 60%; /* Molemmat koko leveydelle */
         text-align: center; /* Keskittää tekstin */
     }
 }
