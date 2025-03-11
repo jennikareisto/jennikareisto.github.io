@@ -114,20 +114,22 @@
         </section>
 
         <section class="contact-section">
-            <h2>Ota yhteyttä</h2>
-            <p>Jätä viesti, niin palaamme asiaan!</p>
-            <form action="mailto:sinun.sahkoposti@example.com" method="post" enctype="text/plain">
-                <label for="name">Nimi</label>
-                <input type="text" id="name" name="name" required>
+            <div class="speech-bubble">
+                <h2>Ota yhteyttä!</h2>
+                <p>Jätä viesti meille, niin palaamme asiaan mahdollisimman pian.</p>
+                <form action="submit.php" method="POST">
+                    <label for="name">Nimi</label>
+                    <input type="text" id="name" name="name" required>
         
-                <label for="email">Sähköposti</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="email">Sähköposti</label>
+                    <input type="email" id="email" name="email" required>
         
-                <label for="message">Viesti</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                    <label for="message">Viesti</label>
+                    <textarea id="message" name="message" required></textarea>
         
-                <button type="submit">Lähetä viesti</button>
-            </form>
+                    <button type="submit">Lähetä</button>
+                </form>
+            </div>
         </section>
         
     </main>
