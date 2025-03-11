@@ -99,16 +99,16 @@
             <div class="speech-bubble">
                 <h2>Ota yhteyttä!</h2>
                 <p>Jätä viesti meille, niin palaamme asiaan mahdollisimman pian.</p>
-                <form action="submit.php" method="POST">
-                    <label for="name">Nimi</label>
-                    <input type="text" id="name" name="name" required>
-        
-                    <label for="email">Sähköposti</label>
-                    <input type="email" id="email" name="email" required>
-        
-                    <label for="message">Viesti</label>
-                    <textarea id="message" name="message" required></textarea>
-        
+                <form action="send_email.php" method="POST">
+                    <label for="nimi">Nimi:</label>
+                    <input type="text" id="nimi" name="nimi" required>
+                
+                    <label for="sahkoposti">Sähköposti:</label>
+                    <input type="email" id="sahkoposti" name="sahkoposti" required>
+                
+                    <label for="viesti">Viesti:</label>
+                    <textarea id="viesti" name="viesti" required></textarea>
+                
                     <button type="submit">Lähetä</button>
                 </form>
             </div>
