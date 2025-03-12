@@ -486,3 +486,34 @@ h2 {
         padding: 40px;
     }
 }
+/* Footer-tyylit */
+footer {
+    background-color: #083d36; /* Tumma vihreä */
+    color: #ffffff; /* Valkoinen teksti */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-icons img {
+    width: 30px; /* Ikonien koko */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-icons img:hover {
+    transform: scale(1.2); /* Kasvattaa kokoa hoverilla */
+}
