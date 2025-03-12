@@ -486,10 +486,10 @@ h2 {
         padding: 40px;
     }
 }
-/* Footer-tyylit */
+/* Footer-tyylit sivun alapalkkiin yhteystiedoille ja somelle */
 footer {
     background-color: #083d36; /* Tumma vihreä */
-    color: #ffffff; /* Valkoinen teksti */
+    color: #ffffff !important; /* Valkoinen teksti */
     text-align: center;
     padding: 20px 0;
 }
